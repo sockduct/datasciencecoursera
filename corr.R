@@ -17,7 +17,7 @@ corr <- function(directory, threshold=0) {
         valid <- nrow(df[good, ])
 
         # Meets threshold?
-        if (valid >= threshold) {
+        if (valid > threshold) {
             cres <- cor(df[good, "sulfate"], df[good, "nitrate"])
             # Only keep result if it's not NA
             # Note:  Get NA where there are no complete rows
